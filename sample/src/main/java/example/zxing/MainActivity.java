@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.zxing.client.android.Intents;
+import com.google.zxing.common.StringUtils;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
 import com.mikepenz.aboutlibraries.LibsBuilder;
@@ -89,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void scanContinuous(View view) {
         Intent intent = new Intent(this, ContinuousCaptureActivity.class);
+//        intent.putExtra(Intents.Scan.CHARACTER_SET, StringUtils.GB2312);//StringUtils.UTF8);
         startActivity(intent);
     }
 
