@@ -49,6 +49,8 @@ public class DefaultDecoderFactory implements DecoderFactory {
 
         if (characterSet != null) {
             hints.put(DecodeHintType.CHARACTER_SET, characterSet);
+        }else {
+            hints.put(DecodeHintType.CHARACTER_SET, "UTF-8");
         }
 
         MultiFormatReader reader = new MultiFormatReader();
